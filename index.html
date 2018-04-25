@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        -->
+        <link type="text/css" rel="stylesheet" href="myStyles.css" />
+        <title>Our Menu</title>
+        <script type="text/javascript" src="phonegap.js"></script>
+    </head>
+    <body>
+        <div id="top">
+            <div id="title">
+                 <h1>RP Daily Grind</h1>
+            </div>
+            <div class="topnav">
+                <a href="index.html" class="active">Menu</a>
+                <a href="order.html">Order</a>
+                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="B6LMUMZ5J35Q6">
+                <input type="hidden" name="display" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
+        </div>
+        <div id="menu">
+            <h1>Our Menu</h1>
+                <h2 onclick="myHotDrinks()">Hot Drinks</h2>
+                    <div id="hotDrinks">
+                        <h3>Hot Chocolate - <a href="order.html" class="order-button"
+                            data-item-name="Hot Chocolate"
+                            data-item-cost="2.00"
+                            data-item-subcats="0"
+                            data-item-flavors="Peppermint~Caramel"
+                            data-item-add-flavors="true"
+                            >$2.00</a></h3>
+                            <ul>
+                                <li>Peppermint</li>
+                                <li>Caramel</li>
+                            </ul>
+                        <h3>Cappuccino - <a href="order.html" class="order-button"
+                            data-item-name="Cappuccino"
+                            data-item-cost="2.00"
+                            data-item-subcats="2"
+                            data-item-flavors="Franch Vanilla~Salted Caramel~Caramel~Fluffy Bunny~Hazelnut,Mocha~Caramel~Peppermint~Hazelnut~Raspberry"
+                            data-item-add-flavors="true"
+                            >$2.00</a></h3>
+                            <div id="special">
+                                <h4>French Vanilla</h4>
+                                    <ul>
+                                        <li>Salted Caramel</li>
+                                        <li>Caramel</li>
+                                        <li>Fluffy Bunny</li>
+                                        <li>Hazelnut</li>
+                                    </ul>
+                                <h4>Mocha</h4>
+                                    <ul>
+                                        <li>Caramel</li>
+                                        <li>Peppermint</li>
+                                        <li>Hazelnut</li>
+                                        <li>Raspberry</li>
+                                    </ul>
+                            </div>
+                        <h3>Tea - <a href="order.html" class="order-button"
+                            data-item-name="Tea"
+                            data-item-cost="1.00"
+                            data-item-subcats="0"
+                            data-item-flavors="Apple Cider~Dragon Fruit Melon~Acai Berry~Chai~Natural~Orange"
+                            data-item-add-flavors="false"
+                            >$1.00</a></h3>
+                            <ul>
+                                <li>Apple Cider</li>
+                                <li>Dragon Fruit Melon</li>
+                                <li>Acai Berry</li>
+                                <li>Chai</li>
+                                <li>Natural</li>
+                                <li>Orange</li>
+                            </ul>
+                        <h3>Black Coffee - <a href="order.html" class="order-button"
+                            data-item-name="Black Coffee"
+                            data-item-cost="1.00"
+                            data-item-subcats="0"
+                            data-item-add-flavors="true"
+                            >$1.00</a></h3>
+                    </div>
+                <h2 onclick="myColdDrinks()">Cold Drinks</h2>
+                    <div id="coldDrinks">
+                        <h3>Iced Coffee - <a href="order.html" class="order-button"
+                            data-item-name="Iced Coffee"
+                            data-item-cost="2.00"
+                            data-item-subcats="0"
+                            data-item-flavors="Mocha~Vanilla"
+                            data-item-add-flavors="true"
+                            >$2.00</a></h3>
+                            <ul>
+                                <li>Mocha</li>
+                                <li>Vanilla</li>
+                            </ul>
+                        <h3>Tropicana - <a href="order.html" class="order-button"
+                            data-item-name="Tropicana"
+                            data-item-cost="1.50"  
+                            data-item-subcats="0"
+                            data-item-flavors="Apple~Orange"
+                            data-item-add-flavors="false"
+                            >$1.50</a></h3>
+                            <ul>
+                                <li>Apple</li>
+                                <li>Orange</li>
+                            </ul>
+                        <h3>Chocolate Milk - <a href="order.html" class="order-button"
+                            data-item-name="Chocolate Milk"
+                            data-item-cost="1.50"
+                            data-item-subcats="0"
+                            data-item-add-flavors="false"
+                            >$1.50</a></h3>
+                        <h3>Water - <a href="order.html" class="order-button"
+                            data-item-name="Water"
+                            data-item-cost="1.00"
+                            data-item-subcats="0"
+                            data-item-add-flavors="false"
+                            >$1.00</a></h3>
+
+                    </div>
+                <h2 onclick="mySnacks()">Snacks</h2>
+                    <div id="snacks">
+                        <h3>Gourmet Covered Chocolates - 
+                            <span id="annoyingLinks">
+                                <a href="order.html" class="order-button"
+                                    data-item-name="Gourmet Chocolate Bar"
+                                    data-item-cost="2.00"
+                                    data-item-subcats="3"
+                                    data-item-flavors="Dark Chocolate~Hazelnut~Coconut~Cashew~Passion Fruit~Cocao Nibs~Macadamia Nut~Coffee Beans~Guava~Almonds~Pinapple,White Chocolate~Coffee Beans,Chocolate~Coffee Beans"
+                                    data-item-add-flavors="false"
+                                    >1 for $2.00</a> or 
+                                <a href="order.html" class="order-button"
+                                    data-item-name="Box of Gourmet Chocolates"
+                                    data-item-cost="20.00"
+                                    data-item-subcats="3"
+                                    data-item-flavors="Dark Chocolate~Hazelnut~Coconut~Cashew~Passion Fruit~Cocao Nibs~Macadamia Nut~Coffee Beans~Guava~Almonds~Pinapple,White Chocolate~Coffee Beans,Chocolate~Coffee Beans"
+                                    data-item-add-flavors="false"
+                                    >Box of 12 for $20.00</a>
+                            </span>
+                        </h3>
+                            <div id="special2">
+                                <h4>Dark Chocolate</h4>
+                                    <ul>
+                                        <li>Hazelnut</li>
+                                        <li>Coconut</li>
+                                        <li>Cashew</li>
+                                        <li>Passion Fruit</li>
+                                        <li>Cocao Nibs</li>
+                                        <li>Macadamia Nut</li>
+                                        <li>Coffee Beans</li>
+                                        <li>Guava</li>
+                                        <li>Almonds</li>
+                                        <li>Pineapple</li>
+                                    </ul>
+                                <h4>White Chocolate</h4>
+                                    <ul>
+                                        <li>Coffee Beans</li>
+                                    </ul>
+                                <h4>Chocolate</h4>
+                                    <ul>
+                                        <li>Coffee Beans</li>
+                                    </ul>
+                            </div>
+                        <h3>Britt Bags - <a href="order.html" class="order-button"
+                            data-item-name="Britt Bags"
+                            data-item-cost="9.00"
+                            data-item-subcats="0"
+                            data-item-flavors="Brittle~Dark Chocolate~Chocolate~White Chocolate~Guava"
+                            data-item-add-flavors="false"
+                            >$9.00</a></h3>
+                            <ul>
+                                <li>Brittle</li>
+                                <li>Dark Chocolate</li>
+                                <li>Chocolate</li>
+                                <li>White Chocolate</li>
+                                <li>Guava</li>
+                            </ul>
+                        <h3>Gourmet Coffee Beans - <a href="order.html" class="order-button"
+                            data-item-name="Gourmet Coffee Beans"
+                            data-item-cost="13.00"
+                            data-item-subcats="0"
+                            data-item-flavors="Moon River~Espresso~Perfect Day"
+                            data-item-add-flavors="false"
+                            >$13.00</a></h3>
+                            <ul>
+                                <li>Moon River</li>
+                                <li>Espresso</li>
+                                <li>Perfect Day</li>
+                            </ul>
+                    </div>
+        </div>
+        <!--<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>-->
+        
+        <p id="bug">Found a bug? Don't worry about BUGGING us. Email Jake: <a href="mailto:rpdailygrindapp@gmail.com?Subject=Bug">rpdailygrindapp@gmail.com</a></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="myJavascript.js"></script>
+    </body>
+</html>

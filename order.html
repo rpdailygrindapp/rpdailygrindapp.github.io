@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Order</title>
+        <!--
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        -->
+        <link type="text/css" rel="stylesheet" href="myStyles.css" />
+        <link type="text/css" rel="stylesheet" href="orderFormStyles.css"/>
+        <script type="text/javascript" src="phonegap.js"></script>
+    </head>
+    <body>
+        <div id="top">
+            <div id="title">
+                 <h1>RP Daily Grind</h1>
+            </div>
+            <div class="topnav">
+                <a href="index.html">Menu</a>
+                <a href="order.html" class="active">Order</a>
+                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="B6LMUMZ5J35Q6">
+                <input type="hidden" name="display" value="1">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
+        </div>
+        
+
+        <!--
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="orderForm">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="business" value="B6LMUMZ5J35Q6">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Hot Chocolate" class="itemName">
+            <input type="hidden" name="amount" value="2.00" class="itemPrice">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="button_subtype" value="products">
+            <input type="hidden" name="add" value="1">
+            <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+            <table>
+                <div class="orderChanges">
+                    
+                </div>
+                <div class="addFlavors">
+                    
+                </div>
+                <a href="order.html" class="addFlavorButton">Add a flavor.</a>
+                <tr><td><input type="hidden" name="on0" value="Special Instructions">Special Instructions</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+            </table>
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        -->
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="orderForm">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="business" value="B6LMUMZ5J35Q6">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Hot Chocolate" class="itemName">
+            <input type="hidden" name="amount" value="2.00" class="itemPrice">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="button_subtype" value="products">
+            <input type="hidden" name="add" value="1">
+            <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+            <table>
+                <tr><td><input type="hidden" name="on0" value="Name" class="nameText">Name</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+                <div class="orderChanges">
+                    
+                </div>
+                <div class="addFlavors">
+                    
+                </div>
+                <a href="order.html" class="addFlavorButton">Add a flavor.</a>
+                <tr><td><input type="hidden" name="on1" value="Special Instructions">Special Instructions</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+            </table>
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" class="cartButton">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        
+        <!--
+        remove index specific flavor
+        keep selected flavors when flavor is removed
+        make it pretty
+        consolidate js
+        -->
+        
+        
+        <!--<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>-->
+        <p id="bug">Found a bug? Don't worry about BUGGING us. Email Jake: <a href="mailto:rpdailygrindapp@gmail.com?Subject=Bug">rpdailygrindapp@gmail.com</a></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="myJavascript.js"></script>
+        <script type="text/javascript" src="orderScript.js"></script>
+    </body>
+</html>

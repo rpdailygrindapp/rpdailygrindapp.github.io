@@ -1,0 +1,118 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2018, 10:10:46 AM
+    Author     : lab.522
+*/
+/* Add a black background color to the top navigation */
+
+
+body{
+    margin: 0px;
+    background-color: #fff6db; /*#f4eed9 #a3966b #bcb9af #fff6db*/
+}
+
+.topnav {
+    background-color: black; /*another option is #333 (it is a very dark gray)*/
+    overflow: hidden;
+    border-radius: 9px;
+    border-top-left-radius: 0px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #d3bb61;
+    color: white;
+}
+
+#title {
+    background-color: black; /*another option is #333 (it is a very dark gray)*/
+    border-radius: 10px;
+}
+
+#title h1   {
+    color: #d3bb61;
+    text-align: center;
+}
+
+#top {
+    background-color: black; /*another option is #333 (it is a very dark gray)*/
+    border-radius: 10px;
+}
+
+#menu h1 {
+    text-align: center;
+}
+
+#menu h2 {
+    background-color: black;
+    color: #d3bb61;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+#menu h3 {
+    text-indent: 30px;
+}
+
+#menu h4 {
+    text-indent: 50px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #d3bb61;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+li {
+    text-indent: 25px;
+    list-style: none;
+}
+
+#special li {
+    text-indent: 40px;
+}
+
+#special2 li {
+    text-indent: 40px;
+}
+
+#annoyingLinks {
+    line-height: 50px;
+    
+}
+
+#hotDrinks {
+    display: none;
+}
+
+#coldDrinks {
+    display: none;
+}
+
+#snacks {
+    display: none;
+}
