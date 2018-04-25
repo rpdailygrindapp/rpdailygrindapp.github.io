@@ -229,14 +229,23 @@ $(".orderChanges").on("click", "#subcatSelection", function(event){
 });
 
 $(".cartButton").click(function(event){
-    event.preventDefault();             //*************************Stops people from ordering**********************************
+    event.preventDefault();            //*************************Stops people from ordering**********************************
+    var orderReady = true;
     if (ItemInfo.name === "0"){
         event.preventDefault();
         alert("Please go to the menu page and pick an Item.");
+        orderReady = false;
     }
-    if ($(".nameText").text() === ""){
+    if ($(".nameText").val() === ""){
         event.preventDefault();
         alert("Please enter a name.");
+        orderReady = false;
+    }
+    
+    
+    
+    if (orderReady === true){
+        alert("If you are a student ordering your drink will not be given to you and no money will be refunded.");
     }
 });
 
