@@ -236,7 +236,7 @@ $(".cartButton").click(function(event){
         alert("Please go to the menu page and pick an Item.");
         orderReady = false;
     }
-    if ($(".nameText").val() === "" && window.matchMedia("(min-width: 600px)").matches){
+    if ($(".nameText").val() === ""){
         event.preventDefault();
         alert("Please enter a name.");
         orderReady = false;
